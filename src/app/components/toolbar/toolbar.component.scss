@@ -1,0 +1,53 @@
+@import "src/_global-variables.scss";
+
+:host {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 4rem;
+}
+
+.toolbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-muted;
+    height: 100%;
+    padding: 0 15px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+::ng-deep mat-icon {
+    svg:hover {
+        .hover-target {
+            fill: $neutral-white !important;
+        }
+
+        .b,
+        .a {
+            stroke: $neutral-white !important;
+        }
+    }
+}
+
+.mat-icon {
+    transition: all 0.5s;
+
+
+    &:hover {
+        scale: 1.4;
+    }
+}
+
+.icon {
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+}
+
+
+.nav-left,
+.nav-right {
+    margin: 2rem 0;
+}
