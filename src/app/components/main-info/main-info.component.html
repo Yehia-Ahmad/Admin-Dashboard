@@ -1,1 +1,14 @@
-<p>main-info works!</p>
+<div class="main-info-container">
+    <section class="main-info">
+        <div class="tabs-container">
+            <div class="tab" *ngFor="let tab of tabsContent" [ngClass]="{'active-tab': activeTab === tab.name}"
+                (click)="changeTab(tab.name)">
+                <span class="total-value"><span>{{tab.value}}</span> {{tab.unit}} </span>
+                <span class="value-type">{{tab.name}}</span>
+                <span class="increase" *ngIf="tab.increase">{{tab.increase}}</span>
+                <span class="decrease" *ngIf="tab.decrease">{{tab.decrease}}</span>
+            </div>
+        </div>
+    </section>
+    <dashboard-side-info />
+</div>

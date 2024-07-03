@@ -15,6 +15,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
+import { StatisticsChartComponent } from './components/statistics-chart/statistics-chart.component';
+import { GasStationInfoComponent } from './components/gas-station-info/gas-station-info.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     ToolbarComponent,
     HeaderComponent,
     MainInfoComponent,
-    SideInfoComponent
+    SideInfoComponent,
+    StatisticsChartComponent,
+    GasStationInfoComponent
   ],
   imports: [
     BrowserModule,

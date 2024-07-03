@@ -1,0 +1,99 @@
+@import "src/_global-variables.scss";
+
+:host {
+    display: block;
+    height: 100%;
+}
+
+.main-info-container {
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    align-items: center;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main-info {
+    height: 100%;
+    background-color: $primary-lightest;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5rem auto 0 auto;
+}
+
+.tab {
+    width: 18rem;
+    height: 10rem;
+    display: flex;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline-end: 1.5rem;
+    background-color: $neutral-white;
+    transition: all 0.5s;
+
+    &>span {
+        display: block;
+        color: $primary-dark;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.active-tab {
+    background-color: $primary-muted-light;
+}
+
+span {
+    color: $primary-dark;
+    font-weight: 500;
+
+    &>span {
+        font-size: 2.5rem;
+    }
+
+}
+
+.value-type {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.increase {
+    color: $primary-accent !important;
+
+    &::before {
+        width: 0;
+        height: 0;
+        content: "";
+        translate: 0 -3px;
+        display: inline-block;
+        margin-inline-end: 0.5rem;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid $primary-accent;
+    }
+}
+
+.decrease {
+    color: $primary-muted !important;
+
+    &::before {
+        width: 0;
+        height: 0;
+        content: "";
+        translate: 0 -3px;
+        display: inline-block;
+        margin-inline-end: 0.5rem;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid $primary-muted;
+    }
+}
