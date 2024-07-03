@@ -1,1 +1,42 @@
-<p>header works!</p>
+<div class="info-container">
+    <div class="info-item">
+        <mat-icon class="icon" svgIcon="gas-station-svgrepo-com"></mat-icon>
+        <span class="info-item-content">2/3</span>
+        <P>Monitored <span class="break-line">Stations</span></P>
+    </div>
+    <div class="info-item">
+        <mat-icon class="icon" svgIcon="rotate-right" style="rotate: 175deg;"></mat-icon>
+        <span class="info-item-content">20s</span>
+        <P>last <span class="break-line">update</span></P>
+    </div>
+</div>
+
+<div class="tabs-container">
+    <span class="tab" [ngClass]="{'active-tab': activeTab === 'today'}" (click)="changeTab('today')">today</span>
+    <span class="tab" [ngClass]="{'active-tab': activeTab === 'yesterday'}"
+        (click)="changeTab('yesterday')">yesterday</span>
+    <span class="tab" [ngClass]="{'active-tab': activeTab === 'last week'}" (click)="changeTab('last week')">last
+        week</span>
+</div>
+
+<div class="date-range-container">
+    <mat-form-field>
+        <mat-label [class.hidden]="isHiddenStartLable">Start Date - time</mat-label>
+        <input [class.show-date]="isHiddenStartLable" matInput [matDatepicker]="startPicker" [(ngModel)]="startDate"
+            (ngModelChange)="logDates()">
+        <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label [class.hidden]="isHiddenEndLable">End Date - time</mat-label>
+        <input [class.show-date]="isHiddenEndLable" matInput [matDatepicker]="endPicker" [(ngModel)]="endDate"
+            [matDatepickerFilter]="endDateFilter" (ngModelChange)="logDates()">
+        <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+        <mat-datepicker #endPicker></mat-datepicker>
+    </mat-form-field>
+
+</div>
+
+<!-- ,
+"node_modules/@angular/material/prebuilt-themes/indigo-pink.css" -->
