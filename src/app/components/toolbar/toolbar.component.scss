@@ -19,25 +19,27 @@
     border-bottom-right-radius: 50px;
 }
 
-::ng-deep mat-icon {
-    svg:hover {
-        .hover-target {
-            fill: $neutral-white !important;
-        }
+.icon-container {
+    ::ng-deep mat-icon {
+        svg:hover {
+            .hover-target {
+                fill: $neutral-white !important;
+            }
 
-        .b,
-        .a {
-            stroke: $neutral-white !important;
+            .b,
+            .a {
+                stroke: $neutral-white !important;
+            }
         }
     }
-}
 
-.mat-icon {
-    transition: all 0.5s;
+    .mat-icon {
+        transition: all 0.5s;
 
 
-    &:hover {
-        scale: 1.4;
+        &:hover {
+            scale: 1.4;
+        }
     }
 }
 
