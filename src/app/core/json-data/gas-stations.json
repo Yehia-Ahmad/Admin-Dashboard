@@ -1,0 +1,56 @@
+[
+    {
+        "stationName": "Gesr El-Suaz",
+        "totalSales": "62,721 m³",
+        "totalValue": "550 EGP",
+        "compressionState": "Compression",
+        "totalTransactionCount": "5161",
+        "maxTransactionPerhour": "20",
+        "maxTransactionPerDateTime": "8-1-2021 | 10:16 PM"
+    },
+    {
+        "stationName": "El-Obour",
+        "totalSales": "62,721 m³",
+        "totalValue": "550 EGP",
+        "compressionState": "Compression",
+        "totalTransactionCount": "5161",
+        "maxTransactionPerhour": "20",
+        "maxTransactionPerDateTime": "8-1-2021 | 10:16 PM"
+    },
+    {
+        "stationName": "5th Settlement",
+        "totalSales": "62,721 m³",
+        "totalValue": "550 EGP",
+        "compressionState": "Compression",
+        "totalTransactionCount": "2161",
+        "maxTransactionPerhour": "20",
+        "maxTransactionPerDateTime": "8-1-2021 | 10:16 PM"
+    },
+    {
+        "stationName": "Nasr City",
+        "totalSales": "62,721 m³",
+        "totalValue": "550 EGP",
+        "compressionState": "Compression",
+        "totalTransactionCount": "5161",
+        "maxTransactionPerhour": "20",
+        "maxTransactionPerDateTime": "8-1-2021 | 10:16 PM"
+    },
+    {
+        "stationName": "El-Shorouk",
+        "totalSales": "62,721 m³",
+        "totalValue": "550 EGP",
+        "compressionState": "Compression",
+        "totalTransactionCount": "1161",
+        "maxTransactionPerhour": "20",
+        "maxTransactionPerDateTime": "8-1-2021 | 10:16 PM"
+    },
+    {
+        "stationName": "El-Sheikh Zayed",
+        "totalSales": "62,721 m³",
+        "totalValue": "550 EGP",
+        "compressionState": "Compression",
+        "totalTransactionCount": "5161",
+        "maxTransactionPerhour": "20",
+        "maxTransactionPerDateTime": "8-1-2021 | 10:16 PM"
+    }
+]

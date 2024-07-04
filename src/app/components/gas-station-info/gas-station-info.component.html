@@ -1,1 +1,66 @@
-<p>gas-station-info works!</p>
+<div class="gas-station-info-tabs">
+    <div class="tab" [ngClass]="{'active-tab': activeTab === 'statistics'}" (click)="changeTab('statistics')">
+        <mat-icon class="chart-icon" svgIcon="chart"></mat-icon>
+        <span>Graph</span>
+    </div>
+    <div class="tab" [ngClass]="{'active-tab': activeTab === 'list'}" (click)="changeTab('list')">
+        <mat-icon class="list-icon" svgIcon="list"></mat-icon>
+        <span>List</span>
+    </div>
+</div>
+<section class="gas-station-info">
+    <div class="gas-station-cards" *ngIf="!isGraph">
+        <div class="gas-station-card" *ngFor="let station of gasStations">
+            <div class="gas-station-card-title">
+                <div class="title-container" [class.compressed]="station.totalTransactionCount < 5000"
+                    [ngStyle]="{'--svg-color': station.totalTransactionCount < 5000 ? '#BCC0CD' : '#FF7F5C'}">
+                    <mat-icon class="gas-station-icon" svgIcon="gas-station-svgrepo-com-4"></mat-icon>
+                    <span class="gas-station-name">{{station.stationName}}</span>
+                </div>
+                <div class="three-dots">
+                    <mat-icon class="three-dots-icon" svgIcon="three-dots" [matMenuTriggerFor]="menu"></mat-icon>
+                </div>
+            </div>
+            <div class="gas-station-card-content">
+                <div class="card-Desc">
+                    <div>
+                        <span>Total Sales</span>
+                        <p>{{station.totalSales}}</p>
+                    </div>
+                    <div>
+                        <span>Total Value</span>
+                        <p>{{station.totalValue}}</p>
+                    </div>
+                </div>
+                <div class="card-Desc">
+                    <div>
+                        <span>Compression State</span>
+                        <p>{{station.compressionState}}</p>
+                    </div>
+                    <div>
+                        <span>Total Transaction Count</span>
+                        <p>{{station.totalTransactionCount}}</p>
+                    </div>
+                </div>
+                <div class="card-Desc">
+                    <div>
+                        <span>Max Transaction/Hour</span>
+                        <p>{{station.maxTransactionPerhour}}</p>
+                    </div>
+                    <div>
+                        <span>Max Transaction Date-Time</span>
+                        <p>{{station.maxTransactionPerDateTime}}</p>
+                    </div>
+                </div>
+            </div>
+            <mat-menu #menu="matMenu" xPosition="before" [overlapTrigger]="false">
+                <div class="actions-menu">
+                    <div class="menuItem" (click)="deleteStationElement(station)">
+                        Delete
+                    </div>
+                </div>
+            </mat-menu>
+        </div>
+    </div>
+    <dashboard-statistics-chart *ngIf="isGraph" />
+</section>

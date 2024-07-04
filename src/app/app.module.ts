@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { StatisticsChartComponent } from './components/statistics-chart/statistics-chart.component';
 import { GasStationInfoComponent } from './components/gas-station-info/gas-station-info.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GasStationInfoComponent } from './components/gas-station-info/gas-stati
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
