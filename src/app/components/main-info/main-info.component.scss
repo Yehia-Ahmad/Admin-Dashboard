@@ -7,15 +7,15 @@
 
 .main-info-container {
     height: 100%;
-    display: grid;
-    overflow: hidden;
+    display: flex;
     align-items: center;
-    grid-template-columns: 2fr 1fr;
+    justify-content: center;
 }
 
 .main-info {
     height: 100%;
     background-color: $primary-lightest;
+    width: 70%;
 }
 
 .tabs-container {

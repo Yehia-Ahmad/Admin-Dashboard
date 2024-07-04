@@ -1,12 +1,18 @@
 @import "src/_global-variables.scss";
 
+:host {
+    position: relative;
+}
+
 .gas-station-info-tabs {
     background-color: $neutral-white;
     border-radius: 50px;
     margin-top: 5rem;
     margin-inline-start: 5rem;
     width: 20rem;
-    translate: 750px;
+    position: absolute;
+    right: 4rem;
+    bottom: 28rem;
     display: flex;
 }
 
@@ -52,7 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 15rem;
 }
 
 .gas-station-cards {
