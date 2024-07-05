@@ -23,7 +23,7 @@
     <mat-form-field>
         <mat-label [class.hidden]="isHiddenStartLable">Start Date - time</mat-label>
         <input [class.show-date]="isHiddenStartLable" matInput [matDatepicker]="startPicker" [(ngModel)]="startDate"
-            (ngModelChange)="logDates()">
+            (ngModelChange)="logDates()" (focus)="startPicker.open()">
         <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
         <mat-datepicker #startPicker></mat-datepicker>
     </mat-form-field>
@@ -31,7 +31,7 @@
     <mat-form-field>
         <mat-label [class.hidden]="isHiddenEndLable">End Date - time</mat-label>
         <input [class.show-date]="isHiddenEndLable" matInput [matDatepicker]="endPicker" [(ngModel)]="endDate"
-            [matDatepickerFilter]="endDateFilter" (ngModelChange)="logDates()">
+            [matDatepickerFilter]="endDateFilter" (ngModelChange)="logDates()" (focus)="endPicker.open()">
         <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
         <mat-datepicker #endPicker></mat-datepicker>
     </mat-form-field>
