@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ReinitializationService } from 'src/app/services/reinitialization.service';
 
 @Component({
   selector: 'dashboard-header',
@@ -20,7 +21,7 @@ export class HeaderComponent {
   endDate: Date | null = null;
 
 
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private reinitializationService: ReinitializationService) {
     this.intiateIcons();
   }
 
@@ -32,17 +33,18 @@ export class HeaderComponent {
     return d ? d >= start : true;
   };
 
-  logDates(): void {
-    this.startDate ? this.isHiddenStartLable = true : '';
-    this.endDate ? this.isHiddenEndLable = true : '';
-    if (this.startDate != null && this.endDate != null) {
-      console.log('Start Date:', this.startDate);
-      console.log('End Date:', this.endDate);
+  dateRangeFilter(): void {
+    this.isHiddenStartLable = !!this.startDate;
+    this.isHiddenEndLable = !!this.endDate;
+
+    if (this.startDate && this.endDate) {
+      this.reinitializationService.triggerReinit();
     }
   }
 
   changeTab(tab: string) {
     this.activeTab = tab;
+    this.reinitializationService.triggerReinit();
   }
 
   intiateIcons() {

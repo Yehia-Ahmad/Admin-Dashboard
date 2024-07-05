@@ -1,4 +1,4 @@
-<div class="main-info-container">
+<div class="main-info-container" *ngIf="!loading">
     <section class="main-info">
         <div class="tabs-container">
             <div class="tab" *ngFor="let tab of tabsContent" [ngClass]="{'active-tab': activeTab === tab.name}"
@@ -10,7 +10,11 @@
             </div>
         </div>
 
-        <dashboard-gas-station-info />
+        <dashboard-gas-station-info *ngIf="!isListLoading" />
     </section>
     <dashboard-side-info />
+</div>
+
+<div *ngIf="loading || isListLoading" class="loading-overlay">
+    <mat-spinner></mat-spinner>
 </div>

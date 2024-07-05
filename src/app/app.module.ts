@@ -19,6 +19,7 @@ import { StatisticsChartComponent } from './components/statistics-chart/statisti
 import { GasStationInfoComponent } from './components/gas-station-info/gas-station-info.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
     MatDatepickerModule,
     MatNativeDateModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
