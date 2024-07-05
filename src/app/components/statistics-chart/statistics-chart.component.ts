@@ -25,7 +25,7 @@ export class StatisticsChartComponent implements OnInit, AfterViewInit {
       {
         data: [250, 140, 200, 230, 120, 100, 300],
         type: 'bar',
-        barWidth: '20%',
+        barWidth: '10%',
       }
     ]
   };

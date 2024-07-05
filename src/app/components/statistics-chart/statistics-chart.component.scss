@@ -1,25 +1,28 @@
 @import "src/_global-variables.scss";
 
+:host {
+    display: block;
+    width: 100%;
+}
+
 .statistics-chart-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 85%;
     background-color: $neutral-white;
-    border-radius: 25px;
     height: 25rem;
-    width: 80rem;
+    margin: 0 auto;
+    border-radius: 25px;
 
     &>.statistics-chart-tabs {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 100%;
         margin-top: 2rem;
         color: $primary-dark;
+        padding: 1.5rem 0 0 1.5rem;
         border-bottom: 1px solid $neutral-muted;
 
         &>span {
-            font-size: 1.5rem;
             font-weight: 600;
             text-transform: uppercase;
             font-family: 'Montserrat', sans-serif;
@@ -28,16 +31,14 @@
         &>.tabs {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            width: 40%;
+            justify-content: space-evenly;
+            width: 55%;
 
             &>span {
                 cursor: pointer;
                 font-family: 'Montserrat', sans-serif;
-                font-size: 1.5rem;
                 font-weight: 600;
                 padding-bottom: 1rem;
-                margin-inline-end: 1.5rem;
                 text-transform: uppercase;
                 transition: all 0.5s ease-in-out;
             }

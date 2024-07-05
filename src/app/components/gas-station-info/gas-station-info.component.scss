@@ -199,3 +199,9 @@
         text-transform: uppercase;
     }
 }
+
+::ng-deep .chart-container {
+    &>div {
+        bottom: 2rem !important;
+    }
+}
