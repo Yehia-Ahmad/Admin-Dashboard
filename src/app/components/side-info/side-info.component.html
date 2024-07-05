@@ -1,1 +1,24 @@
-<p>side-info works!</p>
+<div class="side-info-container">
+    <div class="hourly-sales-container">
+        <h2 class="sales-title">Hourly Sales</h2>
+        <div #chartContainer style="width: 100%; height: 400px; margin: 0 auto;"></div>
+    </div>
+    <div class="sales-station-container">
+        <h2>Sales by Station</h2>
+        <div class="cards-container">
+            <div class="gas-station-card" *ngFor="let station of gasStationSales">
+                <div class="card-desc">
+                    <div class="card-title">
+                        <mat-icon class="gas-station-icon" svgIcon="gas-station-svgrepo-com-4"></mat-icon>
+                        <span class="gas-station-name">{{station.stationName}}</span>
+                    </div>
+                    <span class="gas-station-transaction-count">{{station.totalSales}}</span>
+                    <span *ngIf="!station.totalSales">N/M</span>
+                </div>
+                <div class="progress-bar-container" [class.progress-bar-shrink]="station.progress === 0">
+                    <div class="progress-bar" [style.width.%]="station.progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

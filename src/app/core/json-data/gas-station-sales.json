@@ -1,0 +1,30 @@
+[
+    {
+        "stationName": "Gesr El-Suaz",
+        "totalSales": "62,721 m³",
+        "progress": 80
+    },
+    {
+        "stationName": "El-Obour",
+        "totalSales": "62,721 m³",
+        "progress": 60
+    },
+    {
+        "stationName": "5th Settlement",
+        "progress": 0
+    },
+    {
+        "stationName": "Nasr City",
+        "totalSales": "62,721 m³",
+        "progress": 20
+    },
+    {
+        "stationName": "El-Shorouk",
+        "progress": 0
+    },
+    {
+        "stationName": "El-Sheikh Zayed",
+        "totalSales": "62,721 m³",
+        "progress": 55
+    }
+]

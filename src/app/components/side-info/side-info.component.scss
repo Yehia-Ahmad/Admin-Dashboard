@@ -1,5 +1,95 @@
+@import "src/_global-variables.scss";
+
 :host {
-    background-color: lemonchiffon;
+    background-color: $primary-lightest;
     height: 100%;
     width: 30%;
+}
+
+.hourly-sales-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sales-title {
+    color: $primary-dark;
+}
+
+::ng-deep .hourly-sales-container {
+    &>div {
+        &>canvas {
+            width: 550px !important;
+        }
+    }
+}
+
+.sales-station-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    width: 85%;
+    overflow-y: scroll;
+}
+
+.cards-container {
+    width: 80%;
+}
+
+.gas-station-card {
+    margin-bottom: 1rem;
+}
+
+.card-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &>span {
+        color: $primary-dark;
+        font-weight: bold;
+    }
+
+    &>.card-title {
+        display: flex;
+        align-items: center;
+
+        &>span {
+            font-weight: 600;
+            color: $primary-dark;
+        }
+
+        ::ng-deep mat-icon {
+            scale: 1.5;
+            margin-inline-start: 1rem;
+            margin-inline-end: 1.5rem;
+
+            svg {
+                .a {
+                    stroke: $primary-dark !important;
+                }
+            }
+        }
+    }
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: $primary-muted-light;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: $primary-muted;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.progress-bar-shrink {
+    background-color: $primary-muted-dark;
 }
