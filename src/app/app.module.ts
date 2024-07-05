@@ -9,7 +9,7 @@ import { MainInfoComponent } from './components/main-info/main-info.component';
 import { SideInfoComponent } from './components/side-info/side-info.component';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
@@ -20,6 +20,7 @@ import { GasStationInfoComponent } from './components/gas-station-info/gas-stati
 import { MatMenuModule } from '@angular/material/menu';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ComingFeatureComponent } from './components/coming-feature/coming-feature.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MainInfoComponent,
     SideInfoComponent,
     StatisticsChartComponent,
-    GasStationInfoComponent
+    GasStationInfoComponent,
+    ComingFeatureComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatNativeDateModule,
     MatMenuModule,
     MatProgressSpinnerModule,
+    ReactiveFormsModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),

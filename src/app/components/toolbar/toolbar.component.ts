@@ -9,6 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ToolbarComponent {
 
+  activeUrl: string = 'dashboard';
   icons: string[] = [
     'PMS',
     'control-room',
@@ -21,6 +22,11 @@ export class ToolbarComponent {
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     this.initiateIcons();
+  }
+
+  activeRoute(url: string) {
+    this.activeUrl = url;
+    window.location.href = url.toLowerCase();
   }
 
   initiateIcons() {
