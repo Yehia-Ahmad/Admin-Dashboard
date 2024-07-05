@@ -1,1 +1,10 @@
-<p>statistics-chart works!</p>
+<div class="statistics-chart-container">
+    <div class="statistics-chart-tabs">
+        <span>stations activates overview</span>
+        <div class="tabs">
+            <span *ngFor="let tab of tabs" [ngClass]="{'active-tab': activeTab === tab}"
+                (click)="changeTab(tab)">{{tab}}</span>
+        </div>
+    </div>
+    <div #chartContainer style="width: 1300px; height: 400px;"></div>
+</div>

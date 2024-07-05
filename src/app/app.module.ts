@@ -18,6 +18,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { StatisticsChartComponent } from './components/statistics-chart/statistics-chart.component';
 import { GasStationInfoComponent } from './components/gas-station-info/gas-station-info.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { NgxEchartsModule } from 'ngx-echarts';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,10 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatMenuModule
+    MatMenuModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
