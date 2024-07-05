@@ -20,18 +20,18 @@ export class SideInfoComponent implements AfterViewInit {
     },
     radar: {
       indicator: [
-        { text: '24:00', max: 100 },
-        { text: '22:00', max: 100 },
-        { text: '20:00', max: 100 },
-        { text: '18:00', max: 100 },
-        { text: '16:00', max: 100 },
-        { text: '14:00', max: 100 },
-        { text: '12:00', max: 100 },
-        { text: '10:00', max: 100 },
-        { text: '08:00', max: 100 },
-        { text: '06:00', max: 100 },
-        { text: '04:00', max: 100 },
-        { text: '02:00', max: 100 }
+        { name: '24:00', max: 100 },
+        { name: '22:00', max: 100 },
+        { name: '20:00', max: 100 },
+        { name: '18:00', max: 100 },
+        { name: '16:00', max: 100 },
+        { name: '14:00', max: 100 },
+        { name: '12:00', max: 100 },
+        { name: '10:00', max: 100 },
+        { name: '08:00', max: 100 },
+        { name: '06:00', max: 100 },
+        { name: '04:00', max: 100 },
+        { name: '02:00', max: 100 }
       ],
       center: ['50%', '50%'],
       radius: '75%'
