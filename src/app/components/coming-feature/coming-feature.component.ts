@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'dashboard-coming-feature',
@@ -7,10 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ComingFeatureComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   goToDashboard() {
-    window.location.href = '/dashboard';
+    this.router.navigate(['/dashboard']);
   }
 
 }

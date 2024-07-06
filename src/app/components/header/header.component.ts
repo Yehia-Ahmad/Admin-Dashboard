@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
 import { ReinitializationService } from 'src/app/services/reinitialization.service';
 
 @Component({
@@ -13,17 +11,11 @@ export class HeaderComponent {
   isHiddenStartLable: boolean = false;
   isHiddenEndLable: boolean = false;
   activeTab: string = 'today';
-  icons: string[] = [
-    'gas-station-svgrepo-com',
-    'rotate-right',
-  ];
   startDate: Date | null = null;
   endDate: Date | null = null;
 
 
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private reinitializationService: ReinitializationService) {
-    this.intiateIcons();
-  }
+  constructor(private reinitializationService: ReinitializationService) { }
 
   endDateFilter = (d: Date | null): boolean => {
     if (!this.startDate) {
@@ -45,14 +37,6 @@ export class HeaderComponent {
   changeTab(tab: string) {
     this.activeTab = tab;
     this.reinitializationService.triggerReinit();
-  }
-
-  intiateIcons() {
-    this.icons.forEach(icon => {
-      const url = `assets/icons/${icon}.svg`;
-      this.matIconRegistry.addSvgIcon(icon, this.domSanitizer.bypassSecurityTrustResourceUrl(url)
-      );
-    });
   }
 
 }

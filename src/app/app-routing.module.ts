@@ -4,7 +4,7 @@ import { MainInfoComponent } from './components/main-info/main-info.component';
 import { ComingFeatureComponent } from './components/coming-feature/coming-feature.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
     component: MainInfoComponent
